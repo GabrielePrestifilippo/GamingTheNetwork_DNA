@@ -13,3 +13,4 @@ When enough radio stations will be placed they will be able to talk.
 To place a radio station however you need to answer correctly some questions provided by DNA.
 Answering a question you will find out more information about the company and you might win a coupon code.
 
+![Image of the game](https://github.com/GabrielePrestifilippo/GamingTheNetwork_DNA/blob/master/images/game.png)
