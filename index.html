@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--@version $Id: BasicExample.html 3314 2015-07-10 18:28:45Z dcollins $-->
+<html lang="en">
+<head>
+    <!--NOTE: Most Web World Wind examples use jquery, Bootstrap and requirejs but those technologies are NOT-->
+    <!--required by Web World Wind. See SimplestExample.html for an example of using Web World Wind without them.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vex.css">
+    <link rel="stylesheet" href="css/vex-theme-flat-attack.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/RatingStars.css">
+    <meta charset="UTF-8">
+    <script src="js/worldwind.min.js"></script>
+    <script src="js/vex.combined.min.js"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <!-- <script src="http://speedof.me/api/api.js" type="text/javascript"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jsonFiles.js"></script>
+    <script src="js/2g.js"></script>
+    <script src="js/3g.js"></script>
+    <script src="js/4g.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-flat-attack'</script>
+
+    <script data-main="ultra" src="js/require.min.js"></script>
+    <style>
+
+        #canvasOne {
+            float: left;
+
+            background-color: #111;
+            background-image: url(images/bg.jpg);
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <br>
+            <div class="input-group" id="searchBox">
+                <input type="text" class="form-control" placeholder="Search Coverage" id="searchText"/>
+                <span class="input-group-btn">
+                    <button id="searchButton" class="btn btn-primary" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+            <div class="list-group" id="layerList">
+            </div>
+            <br>
+            <button id="startTest" class="btn btn-primary" type="button">
+                Start Speed test
+            </button>
+            <br> <br>
+            <button id="startGame" class="btn btn-primary" type="button">
+                Play game
+            </button>
+            <br><br>
+            <div class="containerLoader">
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="circle1"></div>
+                </div>
+            </div>
+            <div id="infoMsg">
+
+            </div>
+            <br><br>
+            <div id="rating">
+                <div class="acidjs-rating-stars">
+                    <form>
+                        <input type="radio" name="group-2" id="group-2-0" value="5"/>
+                        <label
+                            for="group-2-0"></label>
+                        <input type="radio" name="group-2" id="group-2-1" value="4"/>
+                        <label
+                            for="group-2-1"></label>
+                        <input type="radio" checked="checked" name="group-2" id="group-2-2" value="3"/>
+                        <label
+                            for="group-2-2"></label>
+                        <input type="radio" name="group-2" id="group-2-3" value="2"/><label for="group-2-3"></label>
+                        <input type="radio" name="group-2" id="group-2-4" value="1"/><label for="group-2-4"></label>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-9" id="globe">
+            <canvas id="canvasOne" width="1000" height="1000" style="width: 100%; height: auto">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+        </div>
+
+
+    </div>
+
+</div>
+</body>
+</html>
